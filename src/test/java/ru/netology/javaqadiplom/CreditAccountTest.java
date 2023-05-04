@@ -228,6 +228,19 @@ public class CreditAccountTest {
 
         account.pay(1_500);
 
-        Assertions.assertEquals(150, account.yearChange());
+        Assertions.assertEquals(-150, account.yearChange());
+    }
+
+    @Test
+    public void shouldAddToPositiveBalance1() {
+        CreditAccount account = new CreditAccount(
+                300,
+                5_000,
+                15
+        );
+
+        account.add(3_000);
+
+        Assertions.assertEquals(3_300, account.getBalance());
     }
 }
