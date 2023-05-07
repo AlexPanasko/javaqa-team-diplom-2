@@ -137,9 +137,9 @@ public class SavingAccountTest {
                 5
         );
 
-        account.pay(500);
+        account.yearChange();
 
-        Assertions.assertEquals(75, account.yearChange());
+        Assertions.assertEquals(100, account.yearChange());
     }
 
 
